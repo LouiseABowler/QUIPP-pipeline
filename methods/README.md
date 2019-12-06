@@ -2,3 +2,4 @@
 
 - synthpop (multiple imputations library in R)
 - GAN (4 versions: vanilla GAN, CGAN, WGAN and WCGAN), currently only on `Credit Card Fraud Detection` dataset.
+- simPop (micro-simulation using IPF, Simulated Annealing and model-based synthesis, designed for datasets with household structure). Currently only on embedded Austrian census data set)
