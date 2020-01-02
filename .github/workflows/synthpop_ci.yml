@@ -5,9 +5,10 @@ on:
   push:
     paths:
       - 'methods/synthpop/**'
+      - '.github/workflows/synthpop_ci.yml'
 
 jobs:
-  run script:
+  run_script:
 
     runs-on: ubuntu-18.04
     container:
@@ -15,7 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Package Dependencies
-      run: Rscript -e "install.packages('synthpop')"
+    - name: Install System Dependencies
+      run: |
+        sudo apt-get update && apt-get install -y --no-install-recommends \
+        libxml2-dev \
+        libssl-dev \
+        libcurl4-openssl-dev
     - name: Run script
       run: Rscript methods/synthpop/synthpop_pipeline.R
