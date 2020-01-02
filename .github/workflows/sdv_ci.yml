@@ -7,6 +7,7 @@ on:
     paths:
       # only run when SDV folder contents are edited
       - 'methods/SDV/**'
+      - '.github/workflows/sdv_ci.yml'
 
 jobs:
   run_script:
