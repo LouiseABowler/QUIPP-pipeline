@@ -16,7 +16,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install Package Dependencies
-      run: Rscript -e "install.packages('synthpop')"
     - name: Run script
       run: Rscript methods/synthpop/synthpop_pipeline.R
