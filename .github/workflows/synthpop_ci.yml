@@ -12,7 +12,7 @@ jobs:
 
     runs-on: ubuntu-18.04
     container:
-      image: r-base:3.6.2
+      image: rocker/tidyverse:3.6.1
 
     steps:
     - uses: actions/checkout@v1
