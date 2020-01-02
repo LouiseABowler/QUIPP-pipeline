@@ -1,8 +1,11 @@
+# Run the SDV python jupyter notebook (including installation of dependencies)
+
 name: SDV CI
 
 on: 
   push:
     paths:
+      # only run when SDV folder contents are edited
       - 'methods/SDV/**'
 
 jobs:
@@ -17,6 +20,8 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
+      # requires sdv and runipy (to run the notebook in command line)
       run: pip install sdv runipy
     - name: Run notebook
+      # just run the notebook for now (testing will be added later)
       run: runipy methods/SDV/SDV_pipeline.ipynb
