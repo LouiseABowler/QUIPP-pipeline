@@ -7,7 +7,7 @@ on:
       - 'methods/synthpop/**'
 
 jobs:
-  run script:
+  run_script:
 
     runs-on: ubuntu-18.04
     container:
