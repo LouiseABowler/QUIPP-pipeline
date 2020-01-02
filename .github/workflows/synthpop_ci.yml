@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'methods/synthpop/**'
+      - '.github/workflows/synthpop_ci.yml'
 
 jobs:
   run_script:
