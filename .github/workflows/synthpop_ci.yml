@@ -16,12 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install System Dependencies
-      run: |
-        sudo apt-get update && apt-get install -y --no-install-recommends \
-        libxml2-dev \
-        libssl-dev \
-        libcurl4-openssl-dev
     - name: Run script
       run: |-
         cd methods/synthpop/
