@@ -22,7 +22,9 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       # requires sdv and runipy (to run the notebook in command line)
-      run: pip install sdv runipy
+      run: |
+        python -m pip install --upgrade pip
+        pip install sdv runipy pytest pytest-cov
     - name: Run notebook
       # just run the notebook for now (testing will be added later)
       run: runipy methods/SDV/SDV_pipeline.ipynb
